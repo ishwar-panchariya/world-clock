@@ -1,0 +1,98 @@
+ion-item {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.clock {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.show {
+    display: block;
+}
+
+.analog-clock {
+    position: relative;
+    margin: 0 auto 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .hand {
+    position: absolute;
+    left: 10px;
+    width: 1px;
+    transform-origin: 100% 100%;
+  }
+
+  .hour {
+    position: absolute;
+    left: 36px;
+    top: 20px;
+    background-color: #cf2121;
+    height: 20px; 
+    width: 4px;
+  }
+
+  .minute {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    background-color: #252525;
+    height: 30px; 
+    width: 2px;
+  }
+
+  .second {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    background-color: #9e9e9e;
+    height: 20px; 
+  }
+
+  .center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .digital-clock {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    font-size: 2em;
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .zone {
+    font-weight: bold;
+    // position: absolute;
+    // top: 50px;
+    // left: 30%;
+  }
+
+  ion-card {
+      background-color: #e07ce9;
+      padding-bottom: 4px;
+  }
+
+  ion-card-subtitle {
+      text-transform: capitalize;
+      color: #000;
+      font-size: 1.2rem;
+  }
+  
+  .trashIcon {
+      float: right;
+      color: #000;
+      font-size: 1.5rem;
+  }

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Currency</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <!-- <ion-label>Operating System</ion-label> -->
+      <ion-input type="number" class="value-input inputOne" [(ngModel)]="fromInputValue" (keyup)="calculateCurrencyOne(fromCurrency, toCurrency)"></ion-input>
+      <ion-select interface="action-sheet" class="inputSelect" [(ngModel)]="fromCurrency" name="fromCurrency" ngDefaultControl (ionChange)="onFromCurrencyChange()">
+        <ion-select-option value="{{x.id}}" *ngFor="let x of currencyCode">{{x.currencyName}} - {{x.id}}</ion-select-option>
+      </ion-select>
+  </ion-card>
+  <ion-card>
+    <ion-input type="number" class="value-input inputTwo" [(ngModel)]="toInputValue" (keyup)="calculateCurrencyTwo(toCurrency, fromCurrency)"></ion-input>
+    <ion-select interface="action-sheet" class="inputSelect" [(ngModel)]="toCurrency" name="toCurrency" ngDefaultControl (ionChange)="onToCurrencyChange()">
+      <ion-select-option value="{{x.id}}" *ngFor="let x of currencyCode" >{{x.currencyName}} - {{x.id}}</ion-select-option>
+    </ion-select>
+  </ion-card>
+  <ion-button size="large" color="light" class="swap" (click)="swap(fromCurrency, toCurrency)">
+    <ion-icon name="repeat-outline"></ion-icon>
+  </ion-button>
+</ion-content>
+

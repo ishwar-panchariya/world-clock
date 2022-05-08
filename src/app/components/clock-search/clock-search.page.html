@@ -1,0 +1,16 @@
+<ion-header padding>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/world-clock"></ion-back-button>
+    </ion-buttons>
+    <ion-title>World Clock Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+    <ion-searchbar placeholder="Search..." (ionChange)="searchCity()" [(ngModel)]="filterTerm" animated="true" showCancelButton="focus"></ion-searchbar>
+    <ion-list *ngFor="let x of newClockList | filter: filterTerm" show-delete="true" can-swipe="true">
+      <ion-item [ngClass]="{show: filterTerm == x[1]}" (click)="addMe(x)">
+        <ion-label>{{x[1] | uppercase}} ({{x[0] | uppercase}})</ion-label>
+      </ion-item>
+    </ion-list> 
+</ion-content>

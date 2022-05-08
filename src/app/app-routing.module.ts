@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'currency',
+    loadChildren: () => import('./components/currency/currency.module').then( m => m.CurrencyPageModule)
+  },
+  {
+    path: 'world-clock',
+    loadChildren: () => import('./components/world-clock/world-clock.module').then( m => m.WorldClockPageModule)
+  },
+  {
+    path: 'clock-search',
+    loadChildren: () => import('./components/clock-search/clock-search.module').then( m => m.ClockSearchPageModule)
+  },
 ];
 
 @NgModule({
